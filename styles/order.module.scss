@@ -1,0 +1,72 @@
+@font-face {
+	font-family: 'Lato800'; 
+	src: url(../fonts/Lato-Heavy.ttf); 
+}
+
+@font-face {
+	font-family: 'Lato400'; 
+	src: url(../fonts/Lato-Regular.ttf); 
+}
+
+
+@mixin fonts(){
+    font-family: 'Lato800';
+    font-style: normal;
+    font-size: 36px;
+    line-height: 43px;
+    display: flex;
+    align-items: center;
+}
+
+.component{
+    content: " ";
+    background: url('../public/order/bgOrder.png') no-repeat fixed top,  #272733;
+    background-size: cover;
+    width: auto;
+    position: realetive;
+    z-index: -2;
+    overflow: auto;   
+    text-align: center;
+    padding-bottom: 150px;
+    .title{
+        display: flex;
+        justify-content: center;
+        @include fonts();
+        text-transform: uppercase;
+        color: #FFFFFF;
+        margin-bottom: 30px;
+        margin-top: 120px;
+        blue{
+            color: #3E9CDC;
+        }
+    }
+    .sub_title{
+        font-family: 'Lato400';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 22px;
+        display: flex;
+        align-items: center;
+        color: #BBBBBB;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 80px;
+    }
+}
+
+@media (max-width: 541px){
+    .component{
+        .title{
+            font-size: 25px;
+        }
+    }
+}
+
+@media (max-width: 350px){
+    .component{
+        .title{
+            font-size: 20px;
+        }
+    }
+}

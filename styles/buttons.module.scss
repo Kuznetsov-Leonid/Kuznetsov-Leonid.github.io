@@ -1,0 +1,114 @@
+@mixin btnFonts(){
+    font-family: 'Lato' sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    text-transform: uppercase;
+    padding: 15px 10px;
+    gap: 10px;
+    border-radius: 4px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+/*----Regular Buttons----*/
+
+.RegularButtonBlue{
+    @include btnFonts();
+    background: #3E9CDC;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    width: 183px;
+}
+
+.RegularButtonWhite{
+    @include btnFonts();
+    background: #FFFFFF;
+    border: 1px solid #6F6D7B;
+    color: #2A2B30;
+    width: 183px;
+}
+
+/*---Regular Buttons hover---*/
+
+.RegularButtonBlue:hover:enabled{
+    color: #3E9CDC;
+    background-color: #FFFFFF;
+    border: 1px solid #3E9CDC;
+}
+.RegularButtonWhite:hover:enabled{
+    color: #ffffff;
+    background-color: #3E9CDC;
+    border: 1px solid #ffffff;
+}
+
+/*---Regular Buttons focus---*/
+
+.RegularButtonBlue:focus{
+    color: #1f6797;
+    background-color: #d8d7d7;
+    border: 1px solid #1f6797;
+}
+.RegularButtonWhite:focus{
+    color: #d8d7d7;
+    background-color: #1f6797;
+    border: 1px solid #d8d7d7;
+}
+
+/*---Regular Buttons active---*/
+
+.RegularButtonBlue:active{
+    color: #1f6797;
+    background-color: #d8d7d7;
+    border: 1px solid #1f6797;
+}
+.RegularButtonWhite:active{
+    color: #d8d7d7;
+    background-color: #1f6797;
+    border: 1px solid #d8d7d7;
+}
+
+/*---Regular Buttons disabled---*/
+
+.RegularButtonBlue:disabled{
+    opacity: 0.6;
+    cursor:unset;
+}
+.RegularButtonWhite:disabled{
+    opacity: 0.6;
+    cursor:unset;
+}
+
+/*---LargeButtonBlue---*/
+
+.LargeButtonBlue{
+    @include btnFonts();
+    background: #3E9CDC;
+    border: 1px solid #FFFFFF;
+    color: #FFFFFF;
+    width: 100%;
+    max-width: 370px;
+}
+.LargeButtonBlue:hover:enabled{
+    color: #3E9CDC;
+    background-color: #FFFFFF;
+    border: 1px solid #3E9CDC;
+}
+.LargeButtonBlue:focus{
+    color: #1f6797;
+    background-color: #d8d7d7;
+    border: 1px solid #1f6797;
+}
+.LargeButtonBlue:active{
+    color: #1f6797;
+    background-color: #d8d7d7;
+    border: 1px solid #1f6797;
+}
+.LargeButtonBlue:disabled{
+    opacity: 0.6;
+    cursor:unset;
+}

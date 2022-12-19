@@ -1,0 +1,130 @@
+@mixin fontShorts($property){
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: $property;
+    font-size: 20px;
+    line-height: 24px;
+}
+
+.jumbotrone{
+    background: url('../public/jumbotrone.jpg') no-repeat fixed top, #1C1E22;
+    background-size: cover;
+    width: auto;
+    position: realetive;
+    z-index: -2;
+    overflow: auto;   
+    color: #000000;
+    padding-bottom: 30px;
+    .title{
+        font-family: 'Lato';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 58px;
+        text-transform: uppercase;
+        margin-top: 26.923076923076923vh;
+        margin-bottom: 10.610079575596817vh;
+        max-width: 50.78125vw;
+        width: auto;
+        blue{
+            color: #43ABF0;
+        }
+    }
+    .shorts{
+        margin-bottom: 10.610079575596817vh;
+        .shorts__title{
+            @include fontShorts(700);
+            margin-bottom: 1.3262599469496021vh;
+        }
+        .shorts__ittems{
+            @include fontShorts(400);
+            ._item{
+                margin-bottom: 0.6631299734748011vh;
+            }
+        }
+    }
+
+    .buttons{
+        margin-bottom: 80px;
+        display: flex;
+        gap: 10px;
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+}
+
+
+@media (min-width: 1990px){
+    .jumbotrone{
+        .title{
+            font-size: 58px;
+        }
+    }
+}
+
+@media (max-width: 1496px){
+    .jumbotrone{
+        .title{
+            font-size: 3.125vw;
+        }
+    }
+}
+
+@media (max-width: 960px){
+    .jumbotrone{
+        background: url('../public/jumbotroneCut.jpg') no-repeat fixed top, #1C1E22;
+        color: #FFFFFF;
+        .title{
+            max-width: 100%;
+            font-size: 38px;
+        }
+    }
+}
+
+
+@media (max-width: 790px){
+    .jumbotrone{
+        .title{
+            font-size: 35px;
+        }
+    }
+}
+
+
+@media (max-width: 769px){
+    .jumbotrone{
+        .title{
+            font-size: 30px;
+        }
+    }
+}
+
+@media (max-width: 541px){
+    .jumbotrone{
+        .title{
+            font-size: 20px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 450px){
+    .jumbotrone{
+        .title{
+            font-size: 33px;
+            width: 100%;
+        }
+    }
+}
+
+@media (max-width: 350px){
+    .jumbotrone{
+        .title{
+            font-size: 25px;
+            width: 100%;
+        }
+    }
+}
+
+
+

@@ -1,0 +1,49 @@
+.Hamburger{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 2rem;
+    height: 2rem;
+    padding: 0;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    outline: none;
+    z-index: 1;
+    
+    div{
+        position: relative;
+        width: 2rem;
+        height: 0.25rem;
+        border-radius: 10px;
+        transition: all 0.3s linear;
+        transform-origin: 1px;
+        background-color: #FFFFFF;
+        
+    }
+    
+}
+.close{
+    :first-child{
+        transform: rotate(0deg);
+    }
+    :nth-child(2){
+        opacity: 1;
+        transform: translateX(0px);
+    }
+    :nth-child(3){
+        transform: rotate(0deg);
+    }
+}
+.open{
+    :first-child{
+        transform: rotate(45deg);
+    }
+    :nth-child(2){
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    :nth-child(3){
+        transform: rotate(-45deg);
+    }
+}

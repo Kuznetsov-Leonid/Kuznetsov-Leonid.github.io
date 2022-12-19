@@ -1,0 +1,128 @@
+
+
+@mixin flex(){
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+@mixin fontNavbar($property){
+    font-family: 'Lato', sans-serif;
+    font-style: normal;
+    font-weight: 600;
+    font-size: $property;
+    line-height: 16px;
+}
+
+@mixin NavbarCollapse(){
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.Header{
+    position: fixed;
+    width: 100%;
+    background: rgba(16, 16, 29, 0.9);
+    height: 100px;
+    text-transform: uppercase;
+    padding: 35px 0;
+    z-index: 20;
+    .row{
+        @include flex();
+        flex-direction: row;
+        justify-content: space-between;
+        margin-right: auto;
+        margin-left: auto;
+        .Logo{
+            font-family: 'Raleway';
+            font-style: normal;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 33px;
+            color: #FFFFFF;
+            transition: 0.2s;
+            blue{
+                color: #43ABF0;
+            }
+        }
+        .Navbar{
+            @include fontNavbar(13px);
+            @include flex();
+            text-align: right;
+            flex-direction: row;
+            gap: 60px;
+        }
+    }
+}
+
+/*---------------------------*/
+._Link{
+    color: #FFFFFF;
+    transition: 0.2s;
+}
+._Link:hover{
+    color: white;
+    text-shadow: 0px 3px 30px rgba(255, 255, 255, 0.9);
+}
+/*---------------------------*/
+._Active{
+    color: #43ABF0;
+    transition: 0.2s;
+}
+._Active:hover{
+    color: #43ABF0;
+    text-shadow: 0px 3px 30px rgba(67, 171, 240, 0.9);
+}
+/*---------------------------*/
+.Logo:hover{
+    text-shadow: 0px 3px 30px rgba(255, 255, 255, 0.4);
+}/*---------------------------*/
+
+.Navbar__toggler{
+    position: fixed;
+    top: 6.2rem;
+    background: rgba(16, 16, 29);
+    height: 400px;
+    @include NavbarCollapse();
+    @include fontNavbar(2rem);
+    z-index: 10;
+    width: 100%;
+    margin-bottom: auto;
+}
+.Navbar__collapse{
+    position: relative;
+    top: -50px;
+    height: 50px;
+    @include fontNavbar(0rem);
+    @include NavbarCollapse();
+    display: none;
+}
+
+.Hamburger{
+    display: none;
+}
+
+@media (max-width: 960px){
+    .Navbar{
+        a{
+            display: none;
+        }
+    }
+    .Hamburger{
+        display: block;
+    }
+}
+
+@media (max-width: 370px){
+    .Header{
+        .row{
+            .Logo{
+                font-size: 24px;
+            }
+        }
+    }
+}

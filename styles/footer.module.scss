@@ -1,0 +1,95 @@
+@font-face {
+	font-family: 'Lato400'; 
+	src: url(../fonts/Lato-Regular.ttf); 
+}
+
+
+.Component{
+    background: #3D4050;
+    color: #FFFFFF;
+    font-family: 'Lato400';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    padding: 30px 0;
+}
+.Footer{
+    display: flex;
+    flex-direction: row;
+    .Copirite{
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-right: auto;
+    }
+    .PaySistem{
+        color: #C3C3C3;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        border-left: solid 1px #C3C3C3;
+        border-right: solid 1px #C3C3C3;
+        padding: 0 4.557291666666667vw;
+        margin: auto 0;
+        .PaySistem__item{
+            display: flex;
+            align-items: center;
+            margin: 0 23px;
+            img{
+                margin-right: 10px;
+            }
+        }
+    }
+    .Contacts{
+        color: #C3C3C3;
+        display: flex;
+        flex-direction: row;
+        align-content: center;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        margin-left: auto;
+        .Contacts__item{
+            display: flex;
+            align-items: center;
+            margin-left: 23px;
+            img{
+                position: relative;
+                bottom: 2px;
+                margin-right: 10px;
+            }
+        }
+    }
+}
+
+
+@media (max-width: 790px){
+    .Footer{
+        display: flex;
+        flex-direction: column;
+        .Copirite{
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        .PaySistem{
+            border: none;
+        }
+        .Contacts{
+            margin: auto;
+            margin-top: 20px;
+        }
+    }
+}
+
+@media (max-width: 349px){
+    .Component{
+        font-size: 10px;
+    }
+}
